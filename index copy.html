@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>big baller 4k my g</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Oxygen+Mono"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/calc.css" />
+		<link rel="stylesheet" href="css/todo.css" />
+		<link rel="stylesheet" href="css/grape.css" />
+		<link rel="stylesheet" href="css/store.css" />
+		<script src="keyboard.js"></script>
+	</head>
+	<body class="disable-select">
+		<div id="starting-win">
+	<!-- <div style="width:100%; height:100%; text-align:center; background:black;" id="black-screen"></div> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+</head>
+<body>
+
+  <div id="signin-popup" style="display: none;">
+    <div id="signin-container">
+      <h2>Sign in with LightID</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Sign in">
+      </form>
+      <p>Don't have a LightID? <a href="#" id="create-lightid-link">Create one</a></p>
+    </div>
+  </div>
+  <div id="create-lightid-popup" style="display: none;">
+    <div id="create-lightid-container">
+      <h2>Create a LightID</h2>
+      <form>
+        <label for="new-username">Username</label>
+        <input type="text" id="new-username" name="new-username" required>
+        <label for="new-password">Password</label>
+        <input type="password" id="new-password" name="new-password" required>
+        <input type="submit" value="Create LightID">
+      </form>
+      <p>Already have a LightID? <a href="#" id="signin-link">Sign in</a></p>
+    </div>
+  </div>
+  <script src="account.js"></script>
+</body>
+</html>
+<script>
+	window.onload = function() {
+	  let userAccount = localStorage.getItem("userAccount");
+	  let message = document.getElementById("message");
+	  let createAccount = document.getElementById("create-account");
+	  let setupLater = document.getElementById("setup-later");
+  
+	  if (userAccount) {
+		message.innerHTML = "Signing in with " + userAccount + "...";
+	  } else {
+		message.innerHTML = "Create a LightID";
+		createAccount.style.display = "block";
+		setupLater.style.display = "block";
+	  }
+	}
+  </script>
+
+
+  <style>
+	  #signin-popup {
+  display: none; /* Hide the popup by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  background-color: white;
+  width: 40%;
+  height: 50%;
+  padding: 50px 5px 40px 5px;
+  font-size: 1.2em;
+  box-shadow: 0 0 2px 5px white;
+  border: 1;
+  border-radius: 12px;
+  border: 1px solid gray;
+  animation: fadeEffect 1s;
+}
+
+/* Style for the close button */
+#signin-popup .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Animation for the popup */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+  </style>
+<div class="welcome">
+	<h1 style="color: white; font-size: x-small;">Finishing</h1>
+		<a onclick="" style="font-size: xx-small; color: white;">LightningOS</a>
+</div>
+<img src="https://toppng.com/uploads/thumbnail//lightning-labs-blog-lightning-labs-logo-11562909375zhj9fefmka.png" alt="You're offline!" /><br />
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="animation">
+	<h1 style="color: white;">Welcome to LightningOS, tailored for chromeOS</h1>
+  </div>
+  
+<div class="loan">
+	<span class="loader__element"></span>
+	<span class="loader__element"></span>
+	<span class="loader__element"></span>
+  </div>
+<style>
+	.animation {
+  animation: move-text 1s ease-in-out;
+}
+
+@keyframes move-text {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+	:root {
+  --main-color: #ecf0f1;
+  --point-color: #555;
+  --size: 5px;
+}
+
+.loan {
+  background-color: transparent;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center; 
+  justify-content: center;  
+  z-index: 100000;
+}
+
+.loader__element {
+  border-radius: 100%;
+  border: var(--size) solid var(--point-color);
+  margin: calc(var(--size)*2);
+}
+
+.loader__element:nth-child(1) {
+  animation: preloader .6s ease-in-out alternate infinite;
+}
+.loader__element:nth-child(2) {
+  animation: preloader .6s ease-in-out alternate .2s infinite;
+}
+
+.loader__element:nth-child(3) {
+  animation: preloader .6s ease-in-out alternate .4s infinite;
+}
+
+@keyframes preloader {
+  100% { transform: scale(2); }
+
+}
+.welcome {
+  /* animation properties */
+  animation-name: my-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+  /* other properties */
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto;
+  margin-right: auto; 
+
+}
+
+@keyframes my-animation {
+  from {
+    background-color: black;
+    width: 300px;
+    top: 10px;
+  }
+  to {
+    background-color: #33475b;
+    width: 55px;
+    top: 100px;
+  }
+}
+</style>
+	</div>
+			<script src="calc.js"></script>
+<script type="text/javascript">
+	jQuery.get("http://ipinfo.io",function(e){
+		console.log(e)
+	},"jsonp")
+</script>
+<script>
+	console.error("Sorry but we couldn't connect to 'LightningCarrier 5GHZ server'")
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  // your code here
+  const selectBox = document.getElementById("custom-select-box");
+const selectedArea = document.getElementById("selected-area");
+
+window.addEventListener("mousedown", (event) => {
+  // Check if the left mouse button was clicked
+  if (event.button === 0) {
+    // Show the select box and set its initial position
+    selectBox.style.display = "block";
+    selectedArea.style.left = event.clientX + "px";
+    selectedArea.style.top = event.clientY + "px";
+  }
+});
+
+window.addEventListener("mousemove", (event) => {
+  // Update the size and position of the selected area
+  selectedArea.style.width = Math.abs(event.clientX - parseInt(selectedArea.style.left)) + "px";
+  selectedArea.style.height = Math.abs(event.clientY - parseInt(selectedArea.style.top)) + "px";
+  selectedArea.style.left = Math.min(event.clientX, parseInt(selectedArea.style.left)) + "px";
+  selectedArea.style.top = Math.min(event.clientY, parseInt(selectedArea.style.top)) + "px";
+});
+
+window.addEventListener("mouseup", () => {
+  // Hide the select box when the mouse button is released
+  selectBox.style.display = "none";
+});
+
+});
+
+
+		</script>
+		<!--remove if needed-->
+		
+<!--end of remove if needed-->
+		<div id="custom-select-box">
+			<div id="selected-area"></div>
+		  </div>
+		  <style>
+			  #custom-select-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+#selected-area {
+  position: absolute;
+  background-color: blue;
+  border-radius: 12px;
+  opacity: 0.5;
+}
+
+		  </style>
+		  
+		 
+		  <script>
+
+
+		  </script>
+		   <div id="main" contextmenu="alert('This action is not supported by Lightning.')">
+			<style>
+				#all-applications-screen .applications {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+height: 100%;
+}
+#all-applications-screen {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: white;
+z-index: 2;
+}
+
+			</style>
+		<script src="main1.js"></script>
+		
+		
+		<script src="poping.js"></script>
+		
+<style>
+	#all-applications-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#all-applications-page h1 {
+  text-align: center;
+}
+
+#all-applications-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+		#main {
+		  filter: none; /* reset filter property */
+		  transition: filter 0.5s; /* add transition for smooth animation */
+		}
+		</style>
+		
+					
+			<!-- This PC -->
+			<div
+			id="app1"
+
+				class="desktop-item"
+				ondblclick="$('#tab').show(); $('.desktop-item').css('background-color','transparent');"
+				onmouseover="hoveredItem(this)"
+				onmouseout="hoveredOut(this)"
+				onclick="selectedItem(this)"
+			>
+				<img src="img/this-pc.png" alt="This PC" />
+				<p draggable="true" id="username">No name</p>
+			</div>
+			<script>
+
+			</script>
+			
+			<!-- Calculator -->
+			<div
+				title="Settings"
+				class="desktop-item"
+				ondblclick="$('#tab-calc').show(); $('.desktop-item').css('background-color','transparent');"
+				onmouseover="hoveredItem(this)"
+				onmouseout="hoveredOut(this)"
+				onclick="selectedItem(this)"
+			>
+				<img src="https://purepng.com/public/uploads/large/purepng.com-settings-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596115dq1ho.png" alt="Calculator" />
+				<p draggable="true">Settings</p>
+			</div>
+			
+
+			<!-- Todo App -->
+			
+			
+			<div
+			
+
+				title="Messages"
+				class="desktop-item"
+				ondblclick="$('#tab-todo').show(); $('.desktop-item').css('background-color','transparent');"
+				onmouseover="hoveredItem(this)"
+				onmouseout="hoveredOut(this)"
+				onclick="selectedItem(this)"
+			>
+				<img src="https://www.freeiconspng.com/thumbs/message-icon-png/message-icon-png-17.png" alt="Computer" />
+				<p draggable="true">Messages</p>
+
+			</div>	
+			<!-- Store App-->
+			<div id="custom-text-box">Open</div>
+<style>
+	#custom-text-box {
+  position: absolute;
+  display: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.desktop-item {
+  transition: transform 0.2s;
+}
+
+.desktop-item:hover {
+  transform: scale(1.2);
+}
+
+.desktop-item:hover + .desktop-item {
+  transform: scale(1.1);
+}
+
+</style>
+<script>
+  window.onload = function() {
+    const apps = document.getElementsByClassName("desktop-item");
+    for (let i = 0; i < apps.length; i++) {
+      apps[i].addEventListener("mouseover", function() {
+        const appText = this.querySelector(".app-text").textContent;
+        // do something with the appText
+		const desktopItems = document.querySelectorAll(".desktop-item");
+const customTextBox = document.getElementById("custom-text-box");
+
+desktopItems.forEach(item => {
+  item.addEventListener("mouseenter", event => {
+    customTextBox.innerHTML = event.target.dataset.text;
+    customTextBox.style.left = event.clientX + "px";
+    customTextBox.style.top = event.clientY + "px";
+    customTextBox.style.display = "block";
+  });
+});
+
+desktopItems.forEach(item => {
+  item.addEventListener("mouseleave", () => {
+    customTextBox.style.display = "none";
+  });
+});
+
+      });
+    }
+  }
+
+</script>
+
+<style>
+	#apps-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap:wrap;
+align-content: center;
+justify-content: center;
+z-index: 2;
+}
+
+#apps-container .app-icon {
+flex: 1;
+max-width: 150px;
+max-height: 150px;
+margin: 10px;
+text-align: center;
+}
+
+#apps-container .app-icon img {
+max-width: 100%;
+max-height: 100%;
+}
+
+#apps-container .app-icon h4 {
+margin-top: 10px;
+font-size: 16px;
+text-align: center;
+}
+
+#main {
+filter: blur(5px);
+transition: filter 0.3s ease-in-out;
+}
+
+#main.blur {
+filter: blur(5px);
+}
+
+#menu-bar li:hover #apps-container {
+display: flex;
+}
+#menu-bar li:hover #main {
+filter: blur(5px);
+}
+#menu-bar li:active #main {
+filter: blur(0px);
+}
+
+#menu-bar li:active #apps-container {
+display: none;
+}
+
+#menu-bar li:active #main {
+filter: blur(0px);
+}
+
+#menu-bar li:active #apps-container {
+display: none;
+}
+
+#menu-bar li:active #main {
+filter: blur(0px);
+}
+
+#menu-bar li:active #apps-container {
+display: none;
+}
+
+#menu-bar li:active #main {
+filter: blur(0px);
+}
+
+#menu-bar li:active #apps-container {
+display: none;
+}
+
+#menu-bar li:active #main {
+filter: blur(0px);
+}
+
+#menu-bar li:active #apps-container {
+display: none;
+}
+#menu-bar li:active #main
+
+{
+filter: blur(5px);
+}
+
+#apps-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.8);
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.app-item {
+width: 150px;
+height: 150px;
+background-color: #f2f2f2;
+margin: 20px;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+font-weight: bold;
+}
+
+.app-item:hover {
+background-color: #e6e6e6;
+cursor: pointer;
+}
+
+#menu-bar li:active #main {
+filter: blur(5px);
+}
+#menu-bar li:active + #apps-container {
+display: flex;
+}
+
+#menu-bar li:active ~ #apps-container {
+display: none;
+}
+
+#menu-bar li:active ~ #main {
+filter: none;
+}
+
+#main {
+  filter: none;
+}
+
+#main.blurred {
+  filter: blur(5px);
+}
+
+
+</style>
+
+<script>
+	// Get the elements for the search engine options
+const googleOption = document.getElementById("google-option");
+const edgeOption = document.getElementById("edge-option");
+const browser = document.getElementById("browser");
+
+// Add click event listeners for each option
+edgeOption.addEventListener("click", function() {
+  browser.innerText = "Microsoft Edge";
+});
+
+  $("#menu-bar #quick-settings").click(function() {
+    var option = $(this).attr("id");
+    switch(option) {
+      case "google-option":
+		googleOption.addEventListener("click", function() {
+  browser.innerText = "Google Chrome";
+});
+        break;
+      case "option2":
+        // Do something for option 2
+        break;
+      case "option3":
+        // Do something for option 3
+        break;
+    }
+  });
+
+// Get all elements with class "desktop-item"
+
+
+</script>
+  
+
+			<div id="menu-bar">
+				<ul>
+				  <li><a href="#">File</a>
+					<ul>
+					  <li><a href="#">New</a></li>
+					  <li><a href="#" id="open-option">Open</a></li>
+					  <li><a href="#">Save</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#">Edit</a>
+					<ul>
+					  <li><a href="#">Cut</a></li>
+					  <li><a href="#">Copy</a></li>
+					  <li><a href="#" id="paste-button">Paste</a></li>
+					</ul>
+				  </li>
+				  <li>
+					<a>Quick Settings</a>
+					<ul id="quick-settings">
+						<h1 style="font-size: large;">Settings</h1>
+						<li>Display:</li>
+						<li>Light Mode</li>
+						<li>Dark Mode</li>
+						<br>
+						<li>Search Engine:</li>
+						<br>
+						<li>Grape</li>
+						<li id="google-option" class="search-engine-option">Google Chrome</li>
+						<br>
+						<li id="edge-option" class="search-engine-option">Microsoft Edge</li>
+					  
+					</ul>
+				  </li>
+
+					</ul>
+				  </li>
+	
+<style>
+
+
+	#browser-change-confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+#browser-change-confirmation h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#browser-change-confirmation button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#browser-change-confirmation button:hover {
+    background-color: #3e8e41;
+}
+
+	#menu-bar li:hover #quick-settings ul {
+  display: block;
+}
+
+#quick-settings ul {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+#quick-settings li ul {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+
+#menu-bar li:active #main {
+filter: none;
+}
+
+#menu-bar li:hover .quick-settings {
+display: block;
+}
+
+.quick-settings {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+padding: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+z-index: 1;
+}
+
+.quick-settings li {
+padding: 5px;
+}
+#menu-bar li:hover #quick-settings {
+  display: block;
+}
+
+#quick-settings {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f1f1f1;
+}
+
+#quick-settings li {
+  width: 100%;
+  padding: 10px;
+}
+
+</style>				  
+					</ul>
+				</ul>
+			  </div>
+
+			  <div id="app-list">
+				<ul>
+					<h1 style="font-size: small;">Most Used</h1>
+				  <li><a onclick="('#tab-grape').show()">App 1</a></li>
+				  <li><a onclick="('#tab-grape').show()">App 2</a></li>
+				  <li><a onclick="('#tab-grape').show()">App 3</a></li>
+				  <li><a onclick="$('#app-list').hide()">Close</a></li>
+				</ul>
+			  </div>
+			  <iframe id="signin-iframe" src="signin.html" style="display:none; position: absolute; top: 6px; left: 80px; z-index: 9; background-color: white; width: 60%; height: 70%; padding: 50px 5px 40px 5px; font-size: 0.8em; box-shadow: 0 0 2px 5px white; border: 1; border-radius: 12px; border: 1px solid white; animation: fadeEffect 1s; resize: horizontal; overflow-y: hidden;"></iframe>
+
+			  <script>
+				  let iframe = document.getElementById("signin-iframe");
+	  if (!localStorage.setItem("LightID")) {
+		iframe.style.display = "block";
+	  }
+	  </script>
+			  <div id="paste-popup" style="display:none">
+				<form id="paste-form">
+				  <label for="paste-name">Paste a doc</label>
+				  <input type="text" id="paste-name" name="paste-name">
+				  <label for="paste-description">Description:</label>
+				  <textarea id="paste-description" name="paste-description"></textarea>
+				  <button type="submit" id="paste-submit">Save</button>
+				  <button type="button" id="paste-cancel">Cancel</button>
+				</form>
+			  </div>
+			  <div id="save-notification" style="display:none">
+				<p id="save-message"></p>
+				<button id="save-close">X</button>
+			  </div>
+			  <script>
+				  let saveButton = document.getElementById("paste-submit");
+let saveNotification = document.getElementById("save-notification");
+let saveMessage = document.getElementById("save-message");
+let saveClose = document.getElementById("save-close");
+
+saveButton.addEventListener("click", function() {
+  let pasteName = document.getElementById("paste-name").value;
+  saveMessage.innerHTML = pasteName + " has been saved to "+ name + "/folders/documents";
+  saveNotification.style.display = "block";
+});
+
+saveClose.addEventListener("click", function() {
+  saveNotification.style.display = "none";
+});
+
+			  </script>
+			  <script src="storage.js"></script>
+<style>
+	#save-notification {
+  /* Style for the save notification */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+#save-close {
+  /* Style for the close button */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+	#paste-submit {
+  /* Style for the paste button */
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#paste-submit:hover {
+  /* Style for the paste button on hover */
+  background-color: #3e8e41;
+}
+
+#paste-cancel {
+  /* Style for the cancel button */
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+
+#paste-cancel:hover {
+  /* Style for the cancel button on hover */
+  background-color: #da190b;
+}
+
+	#paste-popup {
+  /* Style for the paste pop-up menu */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 2px 5px white;
+}
+
+</style>			  
+			  <script>
+				  let pasteButton = document.getElementById("paste-button");
+let pastePopup = document.getElementById("paste-popup");
+let pasteForm = document.getElementById("paste-form");
+let pasteSubmit = document.getElementById("paste-submit");
+let pasteCancel = document.getElementById("paste-cancel");
+
+pasteButton.addEventListener("click", function() {
+  pastePopup.style.display = "block";
+});
+
+pasteCancel.addEventListener("click", function() {
+  pastePopup.style.display = "none";
+});
+
+pasteForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  let pasteName = document.getElementById("paste-name").value;
+  let pasteDescription = document.getElementById("paste-description").value;
+
+  // Code to save the file to the desktop
+});
+
+				  				  let openOption = document.getElementById("open-option");
+let appList = document.getElementById("app-list");
+
+openOption.addEventListener("click", function() {
+  appList.style.display = "block";
+});
+
+			  </script>
+			  <style>
+				  #app-list {
+  /* Style for the app list */
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#app-list {
+  /* Style for the app list */
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#app-list ul {
+  /* Style for the app list items */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#app-list li {
+  /* Style for the app list items */
+  padding: 8px 16px;
+}
+
+#app-list li a {
+  /* Style for the app list links */
+  text-decoration: none;
+  color: #333;
+}
+
+#app-list li a:hover {
+  /* Style for the app list links on hover */
+  background-color: #ddd;
+  color: black;
+}
+
+
+				  #menu-bar {
+  /* Style for the menu bar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+}
+
+#menu-bar ul {
+  /* Style for the menu bar items */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#menu-bar li {
+  /* Style for the menu bar items */
+  float: left;
+}
+
+#menu-bar li a {
+  /* Style for the menu bar links */
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: gray;
+
+}
+
+#menu-bar li a:hover {
+  /* Style for the menu bar links on hover */
+  background-color: #ddd;
+  color: black;
+  border: 1px solid white;
+  border-radius: 16px;
+}
+
+#menu-bar li ul {
+  /* Style for the submenu */
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#menu-bar li:hover ul {
+  /* Style for the submenu on hover */
+  display: block;
+}
+
+			  </style>
+			<div
+				
+			
+				title="Grape"
+				class="desktop-item"
+				ondblclick="$('#tab-grape').show(); $('.desktop-item').css('background-color','transparent');"
+				onmouseover="hoveredItem(this)"
+				onmouseout="hoveredOut(this)"
+				onclick="selectedItem(this)"
+			>
+				<img src="https://freepngdesign.com/content/uploads/images/grape-icon-6646.png" alt="Grape" />
+				<p draggable="true" id="browser">Grape</p>
+</div>
+				<!-- CAL APP -->
+		<div
+		
+				title="Calendar"
+				class="desktop-item"
+				ondblclick="$('#tab-calan').show(); $('.desktop-item').css('background-color','transparent');"
+				onmouseover="hoveredItem(this)"
+				onmouseout="hoveredOut(this)"
+				onclick="selectedItem(this)"
+				>
+				<img src="https://clipart.world/wp-content/uploads/2020/08/may-6-icon-transparent.png" alt="Calendar" />
+				<p draggable="true">Calendar</p>
+
+		</div>
+			<!-- Store App-->
+			
+	<div
+		
+	
+		title="Music+"
+		class="desktop-item"
+		ondblclick="$('#tab-store1').show(); $('.desktop-item').css('background-color','transparent');"
+		onmouseover="hoveredItem(this)"
+		onmouseout="hoveredOut(this)"
+		onclick="selectedItem(this)"
+	>
+		<img src="https://icon-library.com/images/music-icon-ico/music-icon-ico-5.jpg" alt="Store" />
+		<p draggable="true" >Music+</p>
+		
+			</div>
+			</body>
+			</html>
+			<!-- Notes -->
+		<div
+		
+	
+		title="Notes"
+		class="desktop-item"
+		ondblclick="$('#tab-notes').show(); $('.desktop-item').css('background-color','transparent');"
+		onmouseover="hoveredItem(this)"
+		onmouseout="hoveredOut(this)"
+		onclick="selectedItem(this)"
+	>
+		<img src="https://www.pngkey.com/png/full/435-4358013_icon-note-png-notes-icon.png" alt="Notes" />
+		<p draggable="true">Notes</p>
+		
+
+		</div>
+		<div
+		
+	
+		title="ERtv"
+		class="desktop-item"
+		ondblclick="$('#tab-tv').show(); $('.desktop-item').css('background-color','transparent');"
+		onmouseover="hoveredItem(this)"
+		onmouseout="hoveredOut(this)"
+		onclick="selectedItem(this)"
+		
+		>
+		<img src="https://findicons.com/files/icons/1253/flurry_extras/256/tv.png" alt="Notes" />
+		<p draggable="true">ERtv</p>	
+
+	</div>
+
+			
+	<div
+
+	title="Games"
+	class="desktop-item"
+	ondblclick="$('#tab-cam').show(); $('.desktop-item').css('background-color','transparent');"
+	onmouseover="hoveredItem(this)"
+	onmouseout="hoveredOut(this)"
+	onclick="selectedItem(this)"
+	
+	>
+	<img src="https://static.thenounproject.com/png/3136590-200.png" alt="cam">
+	<p>App Store</p>	
+
+	</div>
+	<div
+
+		title="Your Folder"
+		class="desktop-item"
+		ondblclick="$('#tab-folder').show(); $('.desktop-item').css('background-color','transparent');"
+		onmouseover="hoveredItem(this)"
+		onmouseout="hoveredOut(this)"
+		onclick="selectedItem(this)"
+		
+		
+		<p id="folder"></p>	
+
+		</div>
+
+
+		<!-- add in 2.3 <div
+			
+
+		title="Lightning Maps"
+		class="desktop-item"
+		ondblclick="$('#tab-mine').show(); $('.desktop-item').css('background-color','transparent');"
+		onmouseover="hoveredItem(this)"
+		onmouseout="hoveredOut(this)"
+		onclick="selectedItem(this)">
+
+	
+	
+	
+		<img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/mobileservices/petalmaps/img/img-0113/petalmapsicon.svg" alt="Computer" />
+		<p>Maps</p>
+
+	</div>	-->	
+			
+			
+	<div id="desktop">
+		<!-- your desktop content -->
+	  </div>
+	  
+	  <div id="selection-box"></div>
+	  
+			
+<style>
+	#desktop {
+  position: relative;
+  /* other styles */
+}
+
+#selection-box {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 1px solid #000;
+  visibility: hidden;
+}
+
+</style>
+
+		<div id="start-bar">
+			<div
+				title="Lightning Menu"
+				class="win-icon"
+				onclick="$('#logOut').toggle().fadein(5000);"
+			></div>
+	
+
+			</div>
+			<div title="Fullscreen" id="fll" onclick="toggleFullScreen()">
+				<i class="material-icons" style="font-size:36px" <input type="button" value="fullscreen" >
+				fullscreen</i>
+		
+</div>
+
+</div>
+
+
+	</div>
+<!--Add time here if no like-->
+
+
+
+		<div id="tab" >
+			<div id="tab-header" class="tab-header">
+				This PC<i class="material-icons" onclick="toggleFullScreen" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" onclick="$('#tab').hide()"></i>
+			</div> <br/>
+			
+			
+			<div class="tab-middle">
+			<iframe class="resp-iframe" src="extend1.html" gesture="media"  allow="encrypted-media" allowfullscreen></iframe> 
+			</div>
+			
+			<div id="tab-footer">
+				5 Files & 9 Folders | 12.7MB/25MB
+			</div>
+		</div>
+		<div id="tab-calc">
+			<div id="tab-calc-header" class="tab-header">
+				Settings<i <input type="button" value="fullscreen" onclick="maximise_window()" style="right: 3%; size: 50%; display: block; top: 0; color: green;" class="material-icons">fullscreen</i><i class="fa fa-times" onclick="$('#tab-calc').hide(); cls();"></i>
+			</div>
+			
+			
+			
+			<div class="tab-middle-chats2" >
+			<iframe class="resp2-iframe" src="chat.html"></iframe>
+			</div>
+			<iframe src="keyboard-settings.html" id="keyboard-settings" style="display:none"></iframe>
+
+		</div>
+		<div id="tab-todo">
+			<div id="tab-todo-header" class="tab-header">
+				Messages <i class="material-icons" onclick="toggleFullScreen" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" onclick="$('#tab-todo').hide();"></i>
+			</div>
+			<div class="tab-middle-chats">
+			<iframe class="resp2-iframe" src="https://me-chat.herokuapp.com"></iframe>
+		
+		
+		</div>
+		</div>
+		</body>
+		</html>		
+</div>
+</html>
+<div id="tab-grape" >
+	<div id="tab-grape-header" class="tab-header">																																																																		
+		Grape<li><a><i  onclick="window.history.back()" style="right: 3%; size: 50%; display: block; top: 0; color: black;" title="Open Tab in New Window" style="color: black;">&#8592;</i><i class="fa fa-times" onclick="$('#tab-grape').hide()"></i>
+	</div> <br/>
+
+	
+	<div class="tab-grape">
+	<iframe class="resp-iframe" src="grape.html" gesture="media"  allow="encrypted-media" allowfullscreen></iframe> 
+</div>
+</div>
+
+<style>
+	.minimize-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #181e22;
+  cursor: pointer;
+}
+
+#tab-grape-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-title {
+  padding: 10px;
+}
+
+.tab-controls {
+  display: flex;
+}
+
+</style>
+
+<div id="tab-calan" >
+<div id="tab-calan-header" class="tab-header">
+Calendar<i class="material-icons">fullscreen</i><i class="fa fa-times" onclick="$('#tab-calan').hide()"></i>
+</div>
+
+<div class="tab-calan">
+	<iframe class="resp-iframe" src="cal.html"></iframe>
+</div>
+			
+			</html>
+			</div>
+			
+
+<div id="tab-notes" >
+	<div id="tab-notes-header" class="tab-header">
+	Notes<i class="material-icons" onclick="toggleFull" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" onclick="$('#tab-notes').hide()"></i>
+	</div>
+	
+	<div class="tab-calan">
+		<iframe class="resp-iframe" src="notes.html"></iframe>
+	</div>
+				
+				</html>
+				</div>
+		
+			
+			
+			
+<div id="tab-store1" >
+	<div id="tab-store1-header" class="tab-header">
+	Music+ | Premium<i class="material-icons" onclick="toggleFull" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i> <i class="fa fa-times" onclick="$('#tab-store1').hide()"></i>
+	</div>
+
+	
+	
+	<div class="tab-store1">
+		<iframe class="resp-iframe" src="nm.html"></iframe>
+	</div>
+	</div>
+	
+		</div>
+		</html>
+
+				</div>
+				<div id="tab-mine" >
+					<div id="tab-mine-header" class="tab-header">
+					Maps<i class="material-icons" onclick="toggleFull" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" onclick="$('#tab-mine').hide()"></i>
+					</div>
+					
+					<div class="tab-mine">
+						<iframe class="resp2-iframe" src="https://maps.com/"></iframe>
+					</div>
+								
+								</html>
+								</div>
+								<div id="signin-prompt">
+									<h2>"Music+" wants to sign in</h2>
+									<p>Allow this application to sign in with your LightID</p>
+									<button id="yes-button">Yes</button>
+									<button id="no-button">No</button>
+								  </div>
+							
+								  
+								  <style>
+									  #signin-prompt {
+  /* Style for the sign-in prompt */
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display:none;
+}
+#context-menu1 {
+  /* Style for the context menu */
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid #888;
+}
+
+								  </style>
+								  <script>
+									  let desktopItem = document.getElementById("desktop-item");
+let contextMenu = document.getElementById("context-menu1");
+
+desktopItem.addEventListener("contextmenu1", function(e) {
+  e.preventDefault();
+  contextMenu.style.display = "block";
+  contextMenu.style.left = e.clientX + "px";
+  contextMenu.style.top = e.clientY + "px";
+});
+
+									  let musicAppOpen = false; // assume the music app is not open
+
+// check if the music app is open
+function checkMusicApp() {
+  let musicApp = document.getElementById("tab-store1");
+  if (musicApp.style.display !== "none") {
+    musicAppOpen = true;
+  } else {
+    musicAppOpen = false;
+  }
+  if (!musicAppOpen) {
+    let signinPrompt = document.getElementById("signin-prompt");
+	let yesButton = document.getElementById("yes-button");
+let signupIframe = document.getElementById("signup-iframe");
+let noButton = document.getElementById("no-button");
+    signinPrompt.style.display = "block";
+
+yesButton.addEventListener("click", function() {
+  signupIframe.style.display = "block";
+});
+
+    signinPrompt.style.display = "block";
+
+    yesButton.addEventListener("click", function() {
+      // redirect the user to the sign in page
+	onclick="$('#tab-store1').show()"
+    });
+	noButton.addEventListener("click", function() {
+      // redirect the user to the sign in page
+	
+    });
+
+    noButton.addEventListener("click", function() {
+      signinPrompt.style.display = "none";
+    });
+  }
+}
+setInterval(checkMusicApp, 10000); // check if the music app is open every 5 seconds
+
+								  </script>
+								  <!--remove if needed-->
+								  <style>
+								  #music-notification {
+									position: fixed;
+									bottom: 20px;
+									right: 20px;
+									background-color: white;
+									padding: 10px;
+									border-radius: 5px;
+									box-shadow: 2px 2px 5px #ccc;
+									display: none; /* hide the notification by default */
+								}
+								
+								#music-notification.visible {
+									display: block; /* show the notification when the music app is closed */
+								}
+								
+								#music-notification p {
+									margin: 0;
+									font-size: 14px;
+									color: #333;
+								}
+								
+								#music-notification .sound-wave {
+									width: 20px;
+									height: 20px;
+									margin-right: 10px;
+									animation: sound-wave 2s linear infinite;
+								}
+								
+								@keyframes sound-wave {
+									0% {
+										transform: scale(1);
+									}
+									20% {
+										transform: scale(1.5);
+									}
+									40% {
+										transform: scale(1);
+									}
+								}
+							</style>
+								  <iframe id="signup-iframe" src="signin.html" style="display:none; position: absolute; top: 6px; left: 80px; z-index: 9; background-color: white; width: 60%; height: 70%; padding: 50px 5px 40px 5px; font-size: 0.8em; box-shadow: 0 0 2px 5px white; border: 1; border-radius: 12px; border: 1px solid white; animation: fadeEffect 1s; resize: horizontal; overflow-y: hidden;"></iframe>
+
+			</div>
+			<div id="tab-tv">
+				<div id="tab-tv-header" class="tab-header">
+					ERtv<i class="material-icons" onclick="toggleFullScreen" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" title="Close app" onclick="$('#tab-tv').hide();"></i>
+				</div>
+				<div class="tab-middle-chats">
+				<iframe class="resp2-iframe" src="ertvc.html"></iframe>
+			
+			</div>
+			</div>
+			</html>
+			<div id="tab-cam">
+				<div id="tab-cam-header" class="tab-header">
+					App Store<i class="material-icons" onclick="window.history.back();" style="right: 3%; size: 50%; display: block; top: 0; color: white;">home</i><i class="fa fa-times" title="Close app" onclick="$('#tab-cam').hide();"></i>
+				</div>																																																									
+				<div class="tab-cam">																																																																								
+				<iframe class="resp2-iframe" src="contacts.html"></iframe>
+			
+			</div>
+			</div>
+			</div>
+			</html>
+			<div id="tab-show">
+				<div id="tab-show-header" class="tab-header">
+					App Store<i class="material-icons" onclick="toggleFullScreen" style="right: 3%; size: 50%; display: block; top: 0; color: green;">fullscreen</i><i class="fa fa-times" title="Close app" onclick="$('#tab-show').hide();"></i>
+				</div>																																																									
+				<div class="tab-show">																																																																								
+				<iframe class="resp2-iframe" src="alert.html"></iframe>
+			
+			</div>
+			</div>
+			</div>
+			</html>
+			<div id="tab-download">
+				<div id="tab-download-header" class="tab-header">
+					<i class="material-icons" onclick="toggleFullScreen" style="right: 3%; size: 50%; display: block; top: 0; color: green;"></i><i  title="Close Pop Up Alert" onclick="$('#tab-download').hide();">OK</i>
+				</div>																																																									
+				<div class="tab-download">																																																																								
+				<iframe class="resp2-iframe" src="downloader.html"></iframe>
+			
+			</div>
+			</div>
+			</div>
+			</html>
+			<div id="tab-wig">																																																																															
+				<div id="tab-wig-header" class="tab-header">																																																																																																																																																																										
+					Edit Wigits<i class="material-icons" style="right: 3%; size: 50%; display: block; top: 0; color: green;" onclick="selectedItem(this)"	ondblclick="$('#tab-wig').show(); $('.desktop-item').css('background-color','transparent');"></i><i class="fa fa-times" title="Close Pop Up Alert" onclick="$('#tab-wig').hide();"></i>
+				</div>																																																									
+				<div class="tab-wig">																																																																								
+				<iframe class="resp2-iframe" src="wig.html"></iframe>
+			
+			</div>
+			</div>
+			<div id="loader">
+
+				<i
+					class="fa fa-cog fa-spin fa-3x fa-fw"
+					style="color: rgba(223, 0, 0, 0.5)"
+				></i>
+				<span class="sr-only" id="notifo">No internet</span>
+			</div>
+	
+					
+		</a>
+		<script>
+			const logOutButton = document.getElementById("logOut");
+const menu = document.getElementById("menu");
+
+logOutButton.addEventListener("click", () => {
+  menu.style.display = "block";
+  menu.style.position = "absolute";
+  menu.style.left = "50%";
+  menu.style.top = "50%";
+  menu.style.transform = "translate(-50%, -50%)";
+});
+
+		</script>
+		<!-- The Logout (Windows Button) Part -->
+		<div id="logOut">
+			<div id="logout-btn">
+				<h1 style="font-size: small;">Notifications</h1>
+			<h1 style="font-size: small; border: 2px solid black; border-radius: 6px;" onclick="go()" id="ca" style="font-size: small; color: black;">LightningOS was updat-<br>ed to LOS 2.6.1<h2 style="font-size: xx-small; color: gray;">Few moments ago</h2></h1>
+
+				<h1 style="font-size: small; color: black;" id="finish">No more notifications...</h1>
+				<script>
+					function finishing() {
+						
+					  document.getElementById("finish").innerHTML = "Apps like Music+ will only be minimized if running. <h1 style='font-size:xx-small; color:black;'>Now</h1>";
+					}
+	
+					</script>
+					<style>
+						#finish{
+							border-radius: 6px;
+							border: 2px solid black;
+						}
+					</style>
+				<script>
+					function go() {
+						
+					  document.getElementById("ca").innerHTML = "No Notifications";
+					}
+					</script>
+				<br/>
+				<br/>
+			
+				<br/>
+				
+
+					
+					</a>
+				<script>
+					function gon() {
+						
+					  document.getElementById("hon").innerHTML = "Forcing restart";
+					}
+					</script>
+
+		
+				<h1 style="font-size: medium; color: black; text-align: left;">Wigits</h1>
+				<br>
+				<h1 class="material-icons" style="text-align: center;" onclick="$('#tab-wig').show()">add</h1>
+			<a onclick="$('#logOut').hide()" style="font-size: small; color: black;">Hide Controls</a>
+			<a onclick="$('#ff, #ff1').hide()" style="font-size: small; color: black;">Hide Quick Settings</a>
+			<style>
+				.dropbtn {
+				  background-color: white;
+				  color: black;
+				  padding: 16px;
+				  font-size: 16px;
+				  border: none;
+				  cursor: pointer;
+				}
+				
+				.dropbtn:hover, .dropbtn:focus {
+				  background-color: white;
+				}
+				
+				.dropdown {
+				  position: relative;
+				  display: inline-block;
+				}
+				
+				.dropdown-content {
+				  display: none;
+				  position: absolute;
+				  background-color: #f1f1f1;
+				  min-width: 160px;
+				  overflow: auto;
+				  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				  z-index: 1;
+				  border: 1px solid white;
+				  border-radius: 16px;
+				
+				}
+				
+				.dropdown-content a {
+				  color: black;
+				  padding: 12px 16px;
+				  text-decoration: none;
+				  display: block;
+				}
+				
+				.dropdown a:hover {background-color: #ddd;}
+				
+				.show {display: block;}
+				</style>
+				</head>
+				<body>
+				  <script>
+					/* When the user clicks on the button, 
+					toggle between hiding and showing the dropdown content */
+					function myFunction() {
+					  document.getElementById("myDropdown").classList.toggle("show");
+					}
+					
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
+					}
+		
+					</script>
+				
+				
+				
+				<div class="dropdown">
+				
+
+<div id="search-popup" style="display: none;">
+  <div id="search-popup-content">
+    <h1>Spot Light</h1>
+    <input type="text" placeholder="Search..." id="search-input">
+    <button id="search-submit">Search...</button>
+	<div id="search-results"></div>
+  </div>
+</div>
+
+<script>
+const searchButton = document.getElementById("search-button");
+const searchPopup = document.getElementById("search-popup");
+const searchInput = document.getElementById("search-input");
+const searchSubmit = document.getElementById("search-submit");
+
+searchButton.addEventListener("click", () => {
+  searchPopup.style.display = "block";
+  searchInput.focus();
+});
+
+searchSubmit.addEventListener("click", () => {
+  // Add your search functionality here
+});
+
+</script>
+<style>
+	#search-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: white;
+  border: none;
+}
+
+#search-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+#search-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+}
+
+#search-submit {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  margin-right: 10px;
+}
+
+#search-results {
+  display: none;
+}
+
+</style>
+				
+				  <div id="myDropdown" class="dropdown-content">
+					<a onclick="ff1(), $('#ff').hide">Updates</a>
+					<a onclick="ff(),  $('#ff1').hide">Wi-Fi</a>
+				  </div>
+				  <script>																																																																														
+					function ff() {																																																																																
+					document.getElementById("ff").innerHTML = "<h1 style='font-size:small; color:black; border: 2px solid white; border-radius:16px;padding:3px; background-color: white;'>Wi-Fi Settings<br><br>Wi-Fi: Carey-WiFi</h1>"
+					}
+				  </script>
+				  <h1 id="ff">
+					</h1>
+				</div>
+				<script>
+					function ff1() {																																																	
+					document.getElementById("ff1").innerHTML = "<h1 style='font-size:small; color:black; border: 2px solid white; border-radius:16px;padding:3px; background-color: white;'>Update Settings<br><br>Updates<br>None available</h1>"
+					}
+				  </script>																																																
+				  <h1 id="ff1">
+					</h1>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+
+		<div id="clock">Fetching Time...</div>
+		<div id="restart-message"></div>
+
+<script>
+	const restartBtn = document.getElementById("restart-btn");
+
+		// Add event listener to the button
+		restartBtn.addEventListener("click", () => {
+		// Change display to none to make the page invisible
+		document.body.style.display = "none";
+		
+		// Wait for 10 seconds
+		setTimeout(() => {
+		// Change display to block and reload the page
+		document.body.style.display = "block";
+		location.reload();
+		}, 10000);
+		});
+	// Add event listener to the button
+	restartBtn.addEventListener("click", () => {
+		// Change display to none to make the page invisible
+		document.body.style.display = "none";
+		
+		// Wait for 10 seconds
+		setTimeout(() => {
+		// Change display to block and reload the page
+		document.body.style.display = "block";
+		location.reload();
+		}, 10000);
+		});
+		const restartMessage = document.getElementById("restart-message");
+restartMessage.innerText = "";
+
+</script>
+		
+
+
+
+					
+					
+					
+				
+					
+				</li>
+				
+			</ul>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="script7.js"></script>
+
+
+	</body>
+</html>
+</div>
+</div>
+</body>
+</html>
+<ul class="context-menu">
+  <li><a href="index.html"><i class='fa fa-spinner' title="Refreshes desktop and looks for bugs and updates"></i> Refresh Desktop</a></li>
+  <li data-modal-target="#modal"><a ><i class='fa fa-folder' title="Adds a folder to your desktop" onclick="newfolder()"></i> New folder</a></li>
+
+  
+  <li><a ><i class='fa fa-close' title="Closes all open applications"onclick="$('#tab-cam, #tab-grape, #tab-tv, #tab-mine, #tab-store1, #tab-notes, #tab-calan, #tab-todo, #tab-calc, #tab').hide();"></i> Close Apps</a></li>
+  <li><a ><i class='fa fa-cog' title="Restarts all open applications"onclick="$('#tab-download').show();"></i> Restart Applications</a></li>
+  <script>																																																																														
+	function newfolder() {																																																																																
+	document.getElementById("folder").innerHTML = "My Folder"
+	}
+  </script>
+  <li><a ><i class='fa fa-copy' title="Restarts all open applications"onclick="$('#tab-download').show();"></i> Copy</a></li>
+  <li class="divider"></li>
+  <li>
+    <a href="">
+      <i class='fa fa-image' title="Default Wallpapers"></i> Add Text <i class='fa fa-arrow-right' ></i>
+    </a>
+    <ul class="dropdown-menu">
+		<label for="story" style="color: white; border: 1; border-radius: 8px; border: 1px solid white;">Add Text</label>
+
+<textarea id="story" name="story" rows="3" cols="15" placeholder="Add your text here">
+
+</textarea>
+
+	  <li class="divider"></li>
+
+        </a>
+
+
+
+         
+ 
+  <li class="divider"></li>
+  <li>
+    <a href="">
+      <i class='fa fa-image' title="Default Wallpapers"></i> Wallpapers <i class='fa fa-arrow-right' ></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a onclick="changeBg(1)"><i class='bx bx-inspect'></i> Mysterious Forest</a></li>
+      <li><a onclick="changeBg(7)"><i class='bx bx-inspect'></i> White</a></li>
+	  <li><a onclick="changeBg(6)"><i class='bx bx-inspect'></i> Waves</a></li>
+	  <li><a onclick="changeBg(4)"><i class='bx bx-inspect'></i> Explosion</a></li>
+	  <li><a onclick="changeBg(9)"><i class='bx bx-inspect'></i> Windows Flower</a></li>
+	  <li><a onclick="changeBg(8)"><i class='bx bx-inspect'></i> The Beach</a></li>
+	  <li class="divider"></li>
+	  <h1 style="font-size: small; text-align: center; color: white;" title="Get more wallpapers by downloading them on Grape">Installed Wallpapers</h1>
+	  <h1 style="font-size: x-small; text-align: center; color: white;" title="Downloaded Wallpaper" id="nw">No wallpapers</h1>
+	  <li class="divider"></li>
+
+        </a>
+        <ul class="dropdown-menu">
+			<li><a><i class='material-icons'>download</i> The Beach</a></li>
+         
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<body>
+
+<script src="account.js"></script>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  </body>
+  <style>
+	  #restart-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+#restart-logo {
+  width: 100px;
+  height: 100px;
+  background-image: url('your-logo-url.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+	  		#restart-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+		.restarting {
+		background-image: url("https://toppng.com/uploads/thumbnail//lightning-labs-blog-lightning-labs-logo-11562909375zhj9fefmka.png");
+		background-size: contain;
+		animation: restarting 5s ease-in-out;
+		background-color: black;
+		}
+		
+		@keyframes restarting {
+		0% {
+		opacity: 0;
+		}
+		100% {
+		opacity: 1;
+		}
+		}
+
+	  #lightID-popup {
+  width: 350px;
+  text-align: center;
+}
+
+#lightID-popup h3 {
+  margin-bottom: 20px;
+}
+
+#lightID-popup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lightID-popup form label {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+#lightID-popup form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#lightID-popup form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#lightID-popup form button:hover {
+  background-color: #3e8e41;
+}
+
+#lightID-popup p {
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+#lightID-popup a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+  </style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--dark: #222;
+	--dark-l-1: #343434;
+	--dark-l-2: #555;
+	--white: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.context-menu {
+	position: fixed;
+	min-width: 220px;
+	background: var(--dark);
+	border-radius: 12px;
+	padding: 5px 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease;
+}
+.context-menu.show {
+	opacity: 1;
+	visibility: visible;
+}
+.context-enu li {
+	position: relative;
+}
+.context-menu li a {
+	display: flex;
+	grid-gap: .75rem;
+	align-items: center;
+	padding: .75rem 1.25rem;
+	color: var(--white);
+	font-size: .875rem;
+	font-weight: 500;
+}
+.context-menu li:hover {
+	background: var(--dark-l-1);
+}
+.context-menu li a i {
+	font-size: 1.25rem;
+}
+.context-menu li a .arrow {
+	margin-left: auto;
+}
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 5px;
+	left: 100%;
+	min-width: 220px;
+	background: var(--dark);
+	border-radius: 16px;
+	padding: 5px 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s ease;
+}
+.context-menu li:hover > .dropdown-menu {
+	top: -5px;
+	opacity: 1;
+	visibility: visible;
+}
+.divider {
+	height: 1px;
+	background: var(--dark-l-2);
+	margin: 5px 0;
+}
+</style>
+<script>
+	const contextmenu = document.querySelector('.context-menu');
+
+window.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+
+  if(contextmenu.classList.contains('show')) {
+    contextmenu.classList.remove('show');
+  } else {
+    contextmenu.style.top = e.offsetY + 'px';
+    contextmenu.style.left = e.offsetX + 'px';
+    contextmenu.classList.add('show');
+  }
+})
+
+window.addEventListener('click', function () {
+  contextmenu.classList.remove('show');
+})
+</script>
+<script src="downloader.js"></script>
+<script src="name.js"></script>
+<script src="notifapp.js"></script>
+<style>
+	.notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px #888888;
+  z-index: 9999;
+}
+
+.app-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 1.2em;
+  color: #333333;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+</style>
+<script>
+	window.onload = function() {
+  // your JavaScript code here
+  const appIcons = document.querySelectorAll('.app-icon');
+let currentApp = "";
+
+appIcons.forEach(icon => {
+  icon.addEventListener('click', function() {
+    const appId = this.id;
+    currentApp = appId;
+    updateMenuBar();
+  });
+});
+
+function updateMenuBar() {
+  const menuBar = document.getElementById("menu-bar");
+  if(currentApp === "#tab-grape"){
+    menuBar.innerHTML = "Grape";
+  }
+  if(currentApp === "#tab-store1"){
+    menuBar.innerHTML = "Music";
+  }
+
+}
+
+}
+// Get the menu bar element
+// Get the menu bar element
+var menuBar = document.getElementById("clock");
+
+// Create a function to update the time
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  var currentTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+  menuBar.innerHTML = currentTime;
+}
+
+// Call the updateTime function every 1 second
+setInterval(updateTime, 1000);
+
+
+
+</script>
+<style>
+
+.menu-bar1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.menu-bar .time {
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+</style>
